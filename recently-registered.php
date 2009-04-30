@@ -3,7 +3,7 @@
 Plugin Name: Recently Registered
 Plugin URI: http://www.ipstenu.org/
 Description: All this does is add in a submenu under the users menu on the admin side for recently registered users.
-Version: .1
+Version: 0.2
 Author: Mika Epstein
 Author URI: http://www.ipstenu.org/
 
@@ -40,18 +40,37 @@ function recentlyregistered_options() {
 
 ?>
 <div class="wrap">
-<h2>Recently Registered Users</h2>
-<p><?php
+<h2>25 Most Recently Registered Users</h2>
+
+<table class="widefat fixed" cellspacing="0">
+<thead>
+<tr class="thead">
+        <th scope="col" id="username" class="manage-column column-username" style="">Username</th>
+        <th scope="col" id="email" class="manage-column column-email" style="">E-mail</th>
+        <th scope="col" id="registered" class="manage-column column-registered" style="">Registered</th>
+</tr>
+</thead>
+
+<tbody id="users" class="list:user user-list">
+<?php
 
         foreach ( $aUsersID as $iUserID ) :
                 $user = get_userdata( $iUserID );
                 $email = $user->user_email;
                 $grav_url = "http://www.gravatar.com/avatar/".md5( strtolower($email) )."?d=".$default."&size=".$size;
                 ?>
-                        <li><img src="<?php echo $grav_url; ?>"> <?php echo $user->user_login.' ('.$email.')'; ?> <?php printf(__('registered %s ago'), wp_since( $user->user_registered )) ?> (<a href="http://jorjafox.net/blog/wp-admin/user-edit.php?user_id=<?php echo $user->ID ?>">Edit</a>)</li>
+
+                <tr id="<?php echo $iUserID; ?>">
+                  <td class="username column-username"><img alt="Avatar" src="<?php echo $grav_url; ?>" class="avatar avatar-<?php echo $size; ?> photo" height="<?php echo $size; ?>" width="<?php echo $size; ?>" /> <strong><a href="user-edit.php?user_id=<?php echo $user->ID ?>;wp_http_referer=%2Fblog%2Fwp-admin%2Fusers.php"><?php echo $user->user_login; ?></a></strong><br /><div class="row-actions"><span class='edit'><a href="user-edit.php?user_id=<?php echo $user->ID ?>&#038;wp_http_referer=%2Fblog%2Fwp-admin%2Fusers.php">Edit</a></div></td>
+                  <td class="email column-email"><a href="mailto:<?php echo $email; ?>" title="e-mail: <?php echo $email; ?>"><?php echo $email; ?></a></td>
+                  <td class="registered column-registered"><?php printf(__('%s ago'), wp_since( $user->user_registered )) ?></td>
+                                </tr>
                 <?php
         endforeach;
-?></p>
+?>
+</table>
+
+
 </div>
 <?php
 }
