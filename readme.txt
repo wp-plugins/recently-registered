@@ -14,11 +14,13 @@ With this plugin, admins will have a new submenu under the Users menu to list th
 
 = Version 0.2 =
 **30 March, 2009**
+
 * Moved to a sub-folder
 * Formatting the list to be nicer.
 
 = Version 0.1 =
 **27 March, 2009**
+
 * Initial version.
 
 == Installation ==
