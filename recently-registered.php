@@ -3,7 +3,7 @@
 Plugin Name: Recently Registered
 Plugin URI: http://www.ipstenu.org/
 Description: All this does is add in a submenu under the users menu on the admin side for recently registered users.
-Version: 0.2
+Version: 1.0
 Author: Mika Epstein
 Author URI: http://www.ipstenu.org/
 
@@ -57,67 +57,23 @@ function recentlyregistered_options() {
         foreach ( $aUsersID as $iUserID ) :
                 $user = get_userdata( $iUserID );
                 $email = $user->user_email;
+                $registered = strtotime($user->user_registered);
                 $grav_url = "http://www.gravatar.com/avatar/".md5( strtolower($email) )."?d=".$default."&size=".$size;
                 ?>
 
                 <tr id="<?php echo $iUserID; ?>">
-                  <td class="username column-username"><img alt="Avatar" src="<?php echo $grav_url; ?>" class="avatar avatar-<?php echo $size; ?> photo" height="<?php echo $size; ?>" width="<?php echo $size; ?>" /> <strong><a href="user-edit.php?user_id=<?php echo $user->ID ?>;wp_http_referer=%2Fblog%2Fwp-admin%2Fusers.php"><?php echo $user->user_login; ?></a></strong><br /><div class="row-actions"><span class='edit'><a href="user-edit.php?user_id=<?php echo $user->ID ?>&#038;wp_http_referer=%2Fblog%2Fwp-admin%2Fusers.php">Edit</a></div></td>
+                  <td class="username column-username"><img alt="Avatar" src="<?php echo $grav_url; ?>" class="avatar avatar-<?php echo $size; ?> photo" height="<?php echo $size; ?>" width="<?php echo $size; ?>" /> <strong><a href="user-edit.php?user_id=<?php echo $user->ID ?>;wp_http_referer=%2Fblog%2Fwp-admin%2Fusers.php"><?php echo $user->user_login; ?></a></strong><br /><div class="row-actions"><span class='edit'><a href="user-edit.php?user_id=<?php echo $user->ID ?>&#038;wp_http_referer=%2Fblog%2Fwp-admin%2Fusers.php">Edit</a></span></div></td>
                   <td class="email column-email"><a href="mailto:<?php echo $email; ?>" title="e-mail: <?php echo $email; ?>"><?php echo $email; ?></a></td>
-                  <td class="registered column-registered"><?php printf(__('%s ago'), wp_since( $user->user_registered )) ?></td>
-                                </tr>
+                  <td class="registered column-registered"><?php echo date('d M \- g:h:s a', $registered); ?></td>
+                </tr>
                 <?php
         endforeach;
 ?>
 </table>
 
-
 </div>
 <?php
 }
-
-function wp_since( $original, $do_more = 0 ) {
-       $today = time();
-
-   if ( !is_numeric($original) ) {
-          if ( $today < $_original = strtotime( str_replace(',', ' ', $original) ) ) // Looks like bb_since was called twice
-             return $original;
-         else
-             $original = $_original;
-     }
-
-     // array of time period chunks
-     $chunks = array(
-         array(60 * 60 * 24 * 365 , __('year') , __('years')),
-         array(60 * 60 * 24 * 30 , __('month') , __('months')),
-         array(60 * 60 * 24 * 7, __('week') , __('weeks')),
-         array(60 * 60 * 24 , __('day') , __('days')),
-         array(60 * 60 , __('hour') , __('hours')),
-         array(60 , __('minute') , __('minutes')),
-         array(1 , __('second') , __('seconds')),
-     );
-
-     $since = $today - $original;
-
-     for ($i = 0, $j = count($chunks); $i < $j; $i++) {
-         $seconds = $chunks[$i][0];
-         $name = $chunks[$i][1];
-         $names = $chunks[$i][2];
-
-         if ( 0 != $count = floor($since / $seconds) )
-             break;
-     }
-
-     $print = sprintf(__('%1$d %2$s'), $count, $count == 1 ? $name : $names);
-
-     if ( $do_more && $i + 1 < $j) {
-         $seconds2 = $chunks[$i + 1][0];
-         $name2 = $chunks[$i + 1][1];
-         $names2 = $chunks[$i + 1][2];
-         if ( 0 != $count2 = floor( ($since - $seconds * $count) / $seconds2) )
-             $print .= sprintf(__(', %1$d %2$s'), $count2, ($count2 == 1) ? $name2 : $names2);
-     }
-     return $print;
- }
 
 // Hooks
 add_action('admin_menu', 'recentlyregistered_menu');
