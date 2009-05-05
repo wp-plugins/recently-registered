@@ -4,7 +4,7 @@ Contributors: ipstenu
 Requires at least: Unknown
 Tested up to: 2.7.1
 Stable Tag: 1.0
-Donate link: https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=BarlPvkfzQ-nAEgcKy65Jj7qMmPuyzlWNf9Sj-q0FfxaoaeZYqn77uxXXM0&dispatch=5885d80a13c0db1f998ca054efbdf2c25fe4a05bcb33bff6aad6e850552f81af
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5227973
 
 All this does is add in a submenu under the users menu on the admin side for recently registered users.
 
