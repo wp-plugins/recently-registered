@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Recently Registered
-Plugin URI: http://www.ipstenu.org/
+Plugin URI: http://ipstenu.googlecode.com/
 Description: All this does is add in a submenu under the users menu on the admin side for recently registered users.
-Version: 1.1
+Version: 1.2
 Author: Mika Epstein
 Author URI: http://www.ipstenu.org/
 
@@ -32,7 +32,7 @@ function recentlyregistered_menu() {
 // Adding in an option for Stop Forum Spam
 function recentlyregistered_activate() {
         update_option('recentlyregistered_stopforumspam', '0');
-        updatee_option('recentlyregistered_number', '25');
+        update_option('recentlyregistered_number', '25');
 }
 
 // Delete the options if the plugin is being turned off (pet peeve)

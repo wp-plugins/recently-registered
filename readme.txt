@@ -3,7 +3,7 @@ Tags: users, recent, new
 Contributors: ipstenu
 Requires at least: Unknown
 Tested up to: 2.8.4
-Stable Tag: 1.1
+Stable Tag: 1.2
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5227973
 
 All this does is add in a submenu under the users menu on the admin side for recently registered users.
@@ -11,6 +11,13 @@ All this does is add in a submenu under the users menu on the admin side for rec
 == Description ==
 
 With this plugin, admins will have a new submenu under the Users menu to list the 25 most recently registered users (in reverse order), pulling down their avatar, based on what you set as default (so identicon, gravatar, etc). 
+
+== Changelog ==
+
+= Version 1.2 =
+**19 October, 2009 **
+
+* Typo in function caused the plugin epic fail.
 
 = Version 1.1 =
 **16 October, 2009 **
