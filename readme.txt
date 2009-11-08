@@ -2,7 +2,7 @@
 Tags: users, recent, new
 Contributors: ipstenu
 Requires at least: Unknown
-Tested up to: 2.8.4
+Tested up to: 2.8.5
 Stable Tag: 1.2
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5227973
 
