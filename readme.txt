@@ -1,9 +1,9 @@
 === Recently Registered ===
 Tags: users, recent, new
 Contributors: ipstenu
-Requires at least: 2.5
-Tested up to: 2.9
-Stable Tag: 1.2
+Requires at least: 2.7
+Tested up to: 3.0
+Stable Tag: 1.3
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5227973
 
 All this does is add in a submenu under the users menu on the admin side for recently registered users.
@@ -13,6 +13,13 @@ All this does is add in a submenu under the users menu on the admin side for rec
 With this plugin, admins will have a new submenu under the Users menu to list the 25 most recently registered users (in reverse order), pulling down their avatar, based on what you set as default (so identicon, gravatar, etc). 
 
 == Changelog ==
+
+= Version 1.3 =
+**12 July, 2010 **
+
+* Cleanup of code, making it tighter etc.
+* StopForum Spam check (which has been around for a while) is documented
+* DO NOT use this on MultiSite
 
 = Version 1.2 =
 **19 October, 2009 **
@@ -56,11 +63,15 @@ Initial version.
 
 = Will this work on older versions of WordPress? =
 
-Probably, but I started writing this on v 2.7.1.  Just at a glance, it should work on any 2.x WP at this point. That said, you should ALWAYS upgrade, folks!
+Probably, but I started writing this on v 2.7.1.  I won't be supporting anything less that the current version of WordPress and one major release back (so if we're on 3.0, then I support 3.0 and 2.9, but not 2.8, and so on).
 
 = Will this work if I have a special avatar plugin? =
 
 Yes, but it may not show the right avatars. I'd have to know more about those plugins and where they store data before I can answer that.
+
+= Does this work on MultiSite? =
+
+Yes, but don't bother to use it.  No, really.  MultiSite's SuperAdmin user tab pretty much takes care of this (though not the StopForumSpam check). I have no plans on making a StopForumSpam checker for MultiSite at this time.
 
 == Screenshots ==
 

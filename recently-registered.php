@@ -2,8 +2,8 @@
 /*
 Plugin Name: Recently Registered
 Plugin URI: http://ipstenu.googlecode.com/
-Description: All this does is add in a submenu under the users menu on the admin side for recently registered users.
-Version: 1.2
+Description: Add a submenu under the users menu on the admin side for recently registered users.
+Version: 1.3
 Author: Mika Epstein
 Author URI: http://www.ipstenu.org/
 
@@ -26,7 +26,8 @@ Author URI: http://www.ipstenu.org/
 function recentlyregistered_menu() {
                 if (function_exists('add_submenu_page')) {
                 add_submenu_page('users.php', 'Recently Registered', 'Recently Registered', '8', 'recently-registered/recently-registered_options.php');
-        }
+				add_submenu_page('recently-registered/recently-registered_options.php','Edit Members','Edit Members', '10','Edit Members List','recently-registered_list');
+				}
 }
 
 // Adding in an option for Stop Forum Spam
