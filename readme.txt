@@ -15,19 +15,19 @@ With this plugin, admins will have a new submenu under the Users menu to list th
 == Changelog ==
 
 = Version 1.3 =
-**12 July, 2010 **
+**12 July, 2010**
 
 * Cleanup of code, making it tighter etc.
 * StopForum Spam check (which has been around for a while) is documented
 * DO NOT use this on MultiSite
 
 = Version 1.2 =
-**19 October, 2009 **
+**19 October, 2009**
 
 * Typo in function caused the plugin epic fail.
 
 = Version 1.1 =
-**16 October, 2009 **
+**16 October, 2009**
 
 * Added in comment count to page.
 * Added option to change recent number from 25 to whavever you want.
