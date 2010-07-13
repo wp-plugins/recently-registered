@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Recently Registered
-Plugin URI: http://ipstenu.googlecode.com/
+Plugin URI: http://code.ipstenu.org/recently-registered/
 Description: Add a submenu under the users menu on the admin side for recently registered users.
 Version: 1.3
 Author: Mika Epstein
