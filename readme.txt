@@ -1,10 +1,10 @@
 === Recently Registered ===
 Tags: users, recent, new
-Contributors: ipstenu
-Requires at least: 2.7
-Tested up to: 3.0
-Stable Tag: 1.3
+Contributors: Ipstenu
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5227973
+Requires at least: 2.7
+Tested up to: 3.0.1
+Stable Tag: 1.3
 
 All this does is add in a submenu under the users menu on the admin side for recently registered users.
 
