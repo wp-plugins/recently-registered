@@ -1,7 +1,6 @@
 === Recently Registered ===
 Tags: users, recent, new
 Contributors: Ipstenu
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5227973
 Requires at least: 2.7
 Tested up to: 3.0.1
 Stable Tag: 1.3
@@ -12,39 +11,37 @@ All this does is add in a submenu under the users menu on the admin side for rec
 
 With this plugin, admins will have a new submenu under the Users menu to list the 25 most recently registered users (in reverse order), pulling down their avatar, based on what you set as default (so identicon, gravatar, etc). 
 
+**Misc**
+* [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5227973)
+* [Plugin Site](http://code.ipstenu.org/recently-registered/)
+
 == Changelog ==
 
-= Version 1.3 =
-**12 July, 2010**
+= Version 1.3 - 12 July, 2010 =
 
 * Cleanup of code, making it tighter etc.
 * StopForum Spam check (which has been around for a while) is documented
 * DO NOT use this on MultiSite
 
-= Version 1.2 =
-**19 October, 2009**
+= Version 1.2 - 19 October, 2009 =
 
 * Typo in function caused the plugin epic fail.
 
-= Version 1.1 =
-**16 October, 2009**
+= Version 1.1 - 16 October, 2009 =
 
 * Added in comment count to page.
 * Added option to change recent number from 25 to whavever you want.
 
-= Version 1.0 =
-**01 May, 2009**
+= Version 1.0 - 01 May, 2009 =
 
 * Removed the since code (it wasn't working) and replaced with a short date.
 
-= Version 0.2 =
-**30 March, 2009**
+= Version 0.2 - 30 March, 2009 =
 
 * Moved to a sub-folder
 * Formatting the list to be nicer.
 
-= Version 0.1 =
-**27 March, 2009**
+= Version 0.1 - 27 March, 2009 =
 
 Initial version.
 
@@ -71,7 +68,7 @@ Yes, but it may not show the right avatars. I'd have to know more about those pl
 
 = Does this work on MultiSite? =
 
-Yes, but don't bother to use it.  No, really.  MultiSite's SuperAdmin user tab pretty much takes care of this (though not the StopForumSpam check). I have no plans on making a StopForumSpam checker for MultiSite at this time.
+Yes, but don't bother to use it.  MultiSite's SuperAdmin user tab pretty much takes care of this (though not the StopForumSpam check). I have no plans on making a StopForumSpam checker for MultiSite at this time.
 
 == Screenshots ==
 
