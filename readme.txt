@@ -2,7 +2,7 @@
 Tags: users, recent, new
 Contributors: Ipstenu
 Requires at least: 2.7
-Tested up to: 3.0.1
+Tested up to: 3.1
 Stable Tag: 1.3
 
 All this does is add in a submenu under the users menu on the admin side for recently registered users.
