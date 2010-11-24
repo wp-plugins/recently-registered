@@ -2,7 +2,7 @@
 Tags: users, recent, new
 Contributors: Ipstenu
 Requires at least: 2.7
-Tested up to: 3.0.1
+Tested up to: 3.1
 Stable Tag: 1.3
 
 All this does is add in a submenu under the users menu on the admin side for recently registered users.
@@ -12,6 +12,7 @@ All this does is add in a submenu under the users menu on the admin side for rec
 With this plugin, admins will have a new submenu under the Users menu to list the 25 most recently registered users (in reverse order), pulling down their avatar, based on what you set as default (so identicon, gravatar, etc). 
 
 **Misc**
+
 * [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5227973)
 * [Plugin Site](http://code.ipstenu.org/recently-registered/)
 
