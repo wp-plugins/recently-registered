@@ -12,8 +12,6 @@ Add a sortable column to the users list on Single Site WordPress to show registr
 
 This plugin adds a new, sortable, column to the users lists, which shows the date they registered.  This works just like it does on WordPress MultiSite, only for Single Site!
 
-**Misc**
-
 * [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5227973)
 * [Plugin Site](http://code.ipstenu.org/my-plugins/recently-registered/)
 
