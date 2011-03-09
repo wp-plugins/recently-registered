@@ -2,8 +2,8 @@
 /*
 Plugin Name: Recently Registered
 Plugin URI: http://code.ipstenu.org/recently-registered/
-Description: Add a submenu under the users menu on the admin side for recently registered users.
-Version: 1.3
+Description: Add a sortable column to the users list on Single Site WordPress to show registration date.
+Version: 2.0
 Author: Mika Epstein
 Author URI: http://www.ipstenu.org/
 
@@ -21,31 +21,53 @@ Author URI: http://www.ipstenu.org/
 
 */
 
-// Load the options page
+global $wp_version;
+$exit_msg_ms  = 'Sorry, but this plugin is not supported (and will not work) on WordPress MultiSite.';
+$exit_msg_ver = 'Sorry, but this plugin is no longer supported on pre-3.1 WordPress installs.';
+if( is_multisite() ) { exit($exit_msg_ms); }
+if (version_compare($wp_version,"3.0.9","<")) { exit($exit_msg_ver); }
 
-function recentlyregistered_menu() {
-                if (function_exists('add_submenu_page')) {
-                add_submenu_page('users.php', 'Recently Registered', 'Recently Registered', '8', 'recently-registered/recently-registered_options.php');
-				add_submenu_page('recently-registered/recently-registered_options.php','Edit Members','Edit Members', '10','Edit Members List','recently-registered_list');
-				}
-}
 
-// Adding in an option for Stop Forum Spam
-function recentlyregistered_activate() {
-        update_option('recentlyregistered_stopforumspam', '0');
-        update_option('recentlyregistered_number', '25');
-}
+// This makes the column and makes it sortable
+	// Register the column - Registered
+	function registerdate($columns) {
+		$columns['registerdate'] = __('Registered', 'registerdate');
+		return $columns;
+	}
+	add_filter('manage_users_columns', 'registerdate');
 
-// Delete the options if the plugin is being turned off (pet peeve)
-function recentlyregistered_deactivate() {
-        delete_option('recentlyregistered_stopforumspam');
-        delete_option('recentlyregistered_number');
-}
+	// Display the column content
+	function registerdate_columns( $value, $column_name, $user_id ) {
+        if ( 'registerdate' != $column_name )
+           return $value;
+        $user = get_userdata( $user_id );
+        $registerdate = $user->user_registered;
+        //$registerdate = date("Y-m-d", strtotime($registerdate));
+        return $registerdate;
+	}
+	add_action('manage_users_custom_column',  'registerdate_columns', 10, 3);
 
-// Hooks
-add_action('admin_menu', 'recentlyregistered_menu');
+	function registerdate_column_sortable($columns) {
+          $custom = array(
+		  // meta column id => sortby value used in query
+          'registerdate'    => 'registered',
+          );
+      return wp_parse_args($custom, $columns);
+	}
 
-register_activation_hook( __FILE__, 'recentlyregistered_activate' );
-register_deactivation_hook( __FILE__, 'recentlyregistered_deactivate' );
+	add_filter( 'manage_users_sortable_columns', 'registerdate_column_sortable' );
 
+	function registerdate_column_orderby( $vars ) {
+        if ( isset( $vars['orderby'] ) && 'registerdate' == $vars['orderby'] ) {
+                $vars = array_merge( $vars, array(
+                        'meta_key' => 'registerdate',
+                        'orderby' => 'meta_value'
+                ) );
+        }
+
+        return $vars;
+	}
+
+	add_filter( 'request', 'registerdate_column_orderby' );
+	
 ?>
