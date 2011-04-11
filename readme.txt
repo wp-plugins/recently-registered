@@ -2,7 +2,7 @@
 Tags: users, recent, new, buddypress
 Contributors: Ipstenu
 Requires at least: 3.1
-Tested up to: 3.1
+Tested up to: 3.1.1
 Stable Tag: 2.0
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5227973
 
@@ -65,10 +65,6 @@ This version is ONLY supported on WordPress 3.1 or higher.
 2. Using an FTP program, upload the full `/recently-registered/` folder to your WordPress plugins directory (Example: `/wp-content/plugins/`).
 3. Go to Plugins > Installed and activate the plugin.
 4. Go to **Users > Recently Registered** and see who's new.
-
-== To Do ==
-
-1. Add in a delete user link (have to sort out the nonce stuff for that).
 
 == Frequently Asked Questions ==
 
