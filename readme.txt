@@ -1,8 +1,8 @@
 === Recently Registered ===
 Tags: users, recent, new, buddypress
 Contributors: Ipstenu
-Requires at least: 3.2
-Tested up to: 3.1.1
+Requires at least: 3.1
+Tested up to: 3.2
 Stable Tag: 2.0
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5227973
 
