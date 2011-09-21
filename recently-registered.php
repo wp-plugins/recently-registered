@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Recently Registered
-Plugin URI: http://code.ipstenu.org/my-plugins/recently-registered/
+Plugin URI: http://tech.ipstenu.org/my-plugins/recently-registered/
 Description: Add a sortable column to the users list on Single Site WordPress to show registration date.
 Version: 2.0
 Author: Mika Epstein
