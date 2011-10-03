@@ -2,7 +2,7 @@
 Tags: users, recent, new, buddypress
 Contributors: Ipstenu
 Requires at least: 3.1
-Tested up to: 3.2.1
+Tested up to: 3.3
 Stable Tag: 2.0
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5227973
 
@@ -17,54 +17,44 @@ This plugin adds a new, sortable, column to the users lists, which shows the dat
 
 == Changelog ==
 
+= 2.1 =
+* 04 October, 2011 by Ipstenu
+* Removing unused code
+* Cleanup for 3.3
+* Licensing clarifications.
+
 = 2.0 =
-
-*09 March, 2011*
-
+* 09 March, 2011 by Ipstenu
 * Rewrite the whole flippin tech.
 * Removed Stop Forum Spam
 * Removed need for extra page
 * Made sortable (thank you, 3.1!)
 
-= 1.3 =*12 July, 2010*
-
+= 1.3 =* 12 July, 2010 by Ipstenu
 * Cleanup of code, making it tighter etc.
 * StopForum Spam check (which has been around for a while) is documented
 * DO NOT use this on MultiSite
 
-= 1.2 =*19 October, 2009*
-
+= 1.2 =* 19 October, 2009 by Ipstenu
 * Typo in function caused the plugin epic fail.
 
-= 1.1 =*16 October, 2009*
-
+= 1.1 =* 16 October, 2009 by Ipstenu
 * Added in comment count to page.
 * Added option to change recent number from 25 to whavever you want.
 
-= 1.0 =*01 May, 2009*
-
+= 1.0 =* 01 May, 2009 by Ipstenu
 * Removed the since code (it wasn't working) and replaced with a short date.
 
-= 0.2 =*30 March, 2009*
-
+= 0.2 =* 30 March, 2009 by Ipstenu
 * Moved to a sub-folder
 * Formatting the list to be nicer.
 
-= 0.1 =*27 March, 2009*
-
-Initial version.
-
-== Upgrade Notice ==
-
-= 2.0 =
-This version is ONLY supported on WordPress 3.1 or higher.
+= 0.1 =* 27 March, 2009 by Ipstenu
+* Initial version.
 
 == Installation ==
 
-1. Unpack the *.zip file and extract the `/recently-registered/` folder and the files.
-2. Using an FTP program, upload the full `/recently-registered/` folder to your WordPress plugins directory (Example: `/wp-content/plugins/`).
-3. Go to Plugins > Installed and activate the plugin.
-4. Go to **Users > Recently Registered** and see who's new.
+No special instructions.
 
 == Frequently Asked Questions ==
 
@@ -74,7 +64,7 @@ Not anymore.  This ONLY works on WordPress 3.1 and up.
 
 = Does this work on MultiSite? =
 
-Yes, but do *not* use this plugin.  See, this code just activates something that's already there on WordPress MultiSite.  You don't need it!
+Yes, but do *not* use this plugin.  This code just activates something that's already there on WordPress MultiSite.  You don't need it!
 
 = Does this work on BuddyPress? =
 Yes!

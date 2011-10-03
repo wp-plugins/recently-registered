@@ -3,33 +3,34 @@
 Plugin Name: Recently Registered
 Plugin URI: http://tech.ipstenu.org/my-plugins/recently-registered/
 Description: Add a sortable column to the users list on Single Site WordPress to show registration date.
-Version: 2.0
+Version: 2.1
 Author: Mika Epstein
 Author URI: http://www.ipstenu.org/
 
-        Copyright 2009 Mika Epstein (email: ipstenu@ipstenu.org)
+Copyright 2009-11 Mika Epstein (email: ipstenu@ipstenu.org)
 
-        This plugin is free software; you can redistribute it and/or modify
-        it under the terms of the GNU General Public License as published by
-        the Free Software Foundation; either version 2 of the License, or
-        (at your option) any later version.
+    This file is part of Recently Registered, a plugin for WordPress.
 
-        This plugin is distributed in the hope that it will be useful,
-        but WITHOUT ANY WARRANTY; without even the implied warranty of
-        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-        GNU General Public License for more details.
-		
-		The above copyright notice and this permission notice shall be 
-		included in all copies or substantial portions of the Software.
+    Recently Registered is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Recently Registered is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with WordPress.  If not, see <http://www.gnu.org/licenses/>.
 
 */
 
 global $wp_version;
-$exit_msg_ms  = 'Sorry, but this plugin is not supported (and will not work) on WordPress MultiSite.';
-$exit_msg_ver = 'Sorry, but this plugin is no longer supported on pre-3.1 WordPress installs.';
+$exit_msg_ms  = 'Sorry, this plugin is not supported (and will not work) on WordPress MultiSite.';
+$exit_msg_ver = 'Sorry, this plugin is not supported on pre-3.1 WordPress installs.';
 if( is_multisite() ) { exit($exit_msg_ms); }
-if (version_compare($wp_version,"3.0.9","<")) { exit($exit_msg_ver); }
-
+if (version_compare($wp_version,"3.1","<")) { exit($exit_msg_ver); }
 
 // This makes the column and makes it sortable
 	// Register the column - Registered
@@ -45,7 +46,6 @@ if (version_compare($wp_version,"3.0.9","<")) { exit($exit_msg_ver); }
            return $value;
         $user = get_userdata( $user_id );
         $registerdate = $user->user_registered;
-        //$registerdate = date("Y-m-d", strtotime($registerdate));
         return $registerdate;
 	}
 	add_action('manage_users_custom_column',  'registerdate_columns', 10, 3);
@@ -57,7 +57,6 @@ if (version_compare($wp_version,"3.0.9","<")) { exit($exit_msg_ver); }
           );
       return wp_parse_args($custom, $columns);
 	}
-
 	add_filter( 'manage_users_sortable_columns', 'registerdate_column_sortable' );
 
 	function registerdate_column_orderby( $vars ) {
@@ -67,10 +66,7 @@ if (version_compare($wp_version,"3.0.9","<")) { exit($exit_msg_ver); }
                         'orderby' => 'meta_value'
                 ) );
         }
-
         return $vars;
 	}
-
 	add_filter( 'request', 'registerdate_column_orderby' );
-	
 ?>
