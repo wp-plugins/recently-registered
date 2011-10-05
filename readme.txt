@@ -3,7 +3,7 @@ Tags: users, recent, new, buddypress
 Contributors: Ipstenu
 Requires at least: 3.1
 Tested up to: 3.3
-Stable Tag: 2.0
+Stable Tag: 2.1
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5227973
 
 Add a sortable column to the users list on Single Site WordPress to show registration date.
