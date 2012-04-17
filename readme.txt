@@ -2,8 +2,8 @@
 Tags: users, recent, new, buddypress
 Contributors: Ipstenu
 Requires at least: 3.1
-Tested up to: 3.3
-Stable Tag: 2.1
+Tested up to: 3.4
+Stable Tag: 2.2
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5227973
 
 Add a sortable column to the users list on Single Site WordPress to show registration date.
@@ -13,9 +13,13 @@ Add a sortable column to the users list on Single Site WordPress to show registr
 This plugin adds a new, sortable, column to the users lists, which shows the date they registered.  This works just like it does on WordPress MultiSite, only for Single Site!
 
 * [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5227973)
-* [Plugin Site](http://tech.ipstenu.org/my-plugins/recently-registered/)
+* [Plugin Site](http://halfelf.org/plugins/recently-registered/)
 
 == Changelog ==
+
+= 2.2 =
+* 17 April, 2012 by Ipstenu
+* 3.4 okay, fixing URLs, readme formatting, donate links.
 
 = 2.1 =
 * 04 October, 2011 by Ipstenu
@@ -25,7 +29,7 @@ This plugin adds a new, sortable, column to the users lists, which shows the dat
 
 = 2.0 =
 * 09 March, 2011 by Ipstenu
-* Rewrite the whole flippin tech.
+* Rewrite the whole flippin thing.
 * Removed Stop Forum Spam
 * Removed need for extra page
 * Made sortable (thank you, 3.1!)
