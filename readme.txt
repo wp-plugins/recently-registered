@@ -4,7 +4,7 @@ Contributors: Ipstenu
 Requires at least: 3.1
 Tested up to: 3.4
 Stable Tag: 2.2
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5227973
+Donate link: https://www.wepay.com/donations/halfelf-wp
 
 Add a sortable column to the users list on Single Site WordPress to show registration date.
 
@@ -12,7 +12,7 @@ Add a sortable column to the users list on Single Site WordPress to show registr
 
 This plugin adds a new, sortable, column to the users lists, which shows the date they registered.  This works just like it does on WordPress MultiSite, only for Single Site!
 
-* [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5227973)
+* [Donate](https://www.wepay.com/donations/halfelf-wp)
 * [Plugin Site](http://halfelf.org/plugins/recently-registered/)
 
 == Changelog ==
@@ -34,26 +34,32 @@ This plugin adds a new, sortable, column to the users lists, which shows the dat
 * Removed need for extra page
 * Made sortable (thank you, 3.1!)
 
-= 1.3 =* 12 July, 2010 by Ipstenu
+= 1.3 =
+* 12 July, 2010 by Ipstenu
 * Cleanup of code, making it tighter etc.
 * StopForum Spam check (which has been around for a while) is documented
 * DO NOT use this on MultiSite
 
-= 1.2 =* 19 October, 2009 by Ipstenu
+= 1.2 =
+* 19 October, 2009 by Ipstenu
 * Typo in function caused the plugin epic fail.
 
-= 1.1 =* 16 October, 2009 by Ipstenu
+= 1.1 =
+* 16 October, 2009 by Ipstenu
 * Added in comment count to page.
 * Added option to change recent number from 25 to whavever you want.
 
-= 1.0 =* 01 May, 2009 by Ipstenu
+= 1.0 =
+* 01 May, 2009 by Ipstenu
 * Removed the since code (it wasn't working) and replaced with a short date.
 
-= 0.2 =* 30 March, 2009 by Ipstenu
+= 0.2 =
+* 30 March, 2009 by Ipstenu
 * Moved to a sub-folder
 * Formatting the list to be nicer.
 
-= 0.1 =* 27 March, 2009 by Ipstenu
+= 0.1 =
+* 27 March, 2009 by Ipstenu
 * Initial version.
 
 == Installation ==

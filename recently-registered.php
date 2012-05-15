@@ -3,7 +3,7 @@
 Plugin Name: Recently Registered
 Plugin URI: http://halelf.org/plugins/recently-registered/
 Description: Add a sortable column to the users list on Single Site WordPress to show registration date.
-Version: 2.2
+Version: 2.3
 Author: Mika Epstein
 Author URI: http://www.ipstenu.org/
 
@@ -74,7 +74,7 @@ if (version_compare($wp_version,"3.1","<")) { exit($exit_msg_ver); }
 	add_filter('plugin_row_meta', 'registerdate_donate_link', 10, 2);
 	function registerdate_donate_link($links, $file) {
         if ($file == plugin_basename(__FILE__)) {
-                $donate_link = '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ipstenu%40ipstenu%2eorg">Donate</a>';
+                $donate_link = '<a href="https://www.wepay.com/donations/halfelf-wp">Donate</a>';
                 $links[] = $donate_link;
         }
         return $links;
