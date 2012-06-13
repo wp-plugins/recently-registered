@@ -46,6 +46,7 @@ if (version_compare($wp_version,"3.1","<")) { exit($exit_msg_ver); }
            return $value;
         $user = get_userdata( $user_id );
         $registerdate = $user->user_registered;
+        $registerdate = date_i18n(get_option('date_format') ,strtotime($registerdate) );
         return $registerdate;
 	}
 	add_action('manage_users_custom_column',  'registerdate_columns', 10, 3);
@@ -79,5 +80,3 @@ if (version_compare($wp_version,"3.1","<")) { exit($exit_msg_ver); }
         }
         return $links;
 }
-
-?>
