@@ -44,8 +44,12 @@ class RRHE {
         if ( 'registerdate' != $column_name )
            return $value;
         $user = get_userdata( $user_id );
-        $registered = $user->user_registered;
-        $registerdate = '<span>'. date_i18n(get_option('date_format'),strtotime($registered) ) .'<br />'. date_i18n(get_option('time_format'),strtotime($registered) ) .'</span>' ;
+        $registerdate = strtotime($user->user_registered);
+        $timeformat   = get_option( 'time_format' );
+        $dateformat   = get_option( 'date_format' );
+        $registerformat = $dateformat.' '.$timeformat;
+
+        $registerdate = get_date_from_gmt( date_i18n( $registerformat , $registerdate , true ), $registerformat );
         return $registerdate;
 	}
 

@@ -2,7 +2,7 @@
 Tags: users, recent, new, buddypress
 Contributors: Ipstenu
 Requires at least: 3.1
-Tested up to: 3.5
+Tested up to: 3.7
 Stable Tag: 3.1
 Donate link: https://www.wepay.com/donations/halfelf-wp/
 
@@ -18,8 +18,8 @@ This plugin adds a new, sortable, column to the users lists, which shows the dat
 == Changelog ==
 
 = 3.1 =
-* 17 Jan, 2013 by Ipstenu
-* Added in time to display (per request of <a href="http://wordpress.org/support/topic/show-timestamp?replies=1#post-3740366">razorfrog</a>)
+* 21 Oct, 2013 by Ipstenu
+* Fixed localization and date_i18n()'ing (thanks, ssjaimia)
 
 = 3.0 =
 * 16 Jan, 2013 by Ipstenu
@@ -85,10 +85,6 @@ No special instructions.
 
 Because some other plugins are _doing_it_wrong(). When they created their column, they forgot to have the filter return the previous content, if it's not their column, so it's removing it. Since my plugin's doing it right, I gave it a higher priority to stop that from happening in most cases.
 
-= How do I change the format of the dates/time? =
-
-Those are pulled from how you set the Date and Time formats in General settings.
-
 = Will this work on older versions of WordPress? =
 
 Not anymore.  This ONLY works on WordPress 3.1 and up.
@@ -103,7 +99,7 @@ Yes!
 
 = Why doesn't this check for Stop Forum Spam anymore? =
 
-Scope. A plugin should do what it does, and not everything.
+Overlap.  After a lot of testing, I determiend that [Ban Hammer](http://wordpress.org/extend/plugins/ban-hammer/) does this better and cleaner.  So if you need that sort of thing, use the right tool.
 
 = Why did you remove the separate page? =
 
