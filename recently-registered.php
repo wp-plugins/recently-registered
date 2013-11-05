@@ -3,7 +3,7 @@
 Plugin Name: Recently Registered
 Plugin URI: http://halelf.org/plugins/recently-registered/
 Description: Add a sortable column to the users list on Single Site WordPress to show registration date.
-Version: 3.1
+Version: 3.2
 Author: Mika Epstein
 Author URI: http://www.ipstenu.org/
 
